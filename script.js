@@ -241,10 +241,6 @@ function abrirModal(numeroPractica) {
         
         <h3><i class="fa-solid fa-lightbulb"></i> Conclusiones</h3>
         <p class="definition" style="border-left-color: var(--p-color); margin-bottom: 0;">${datos.conclusiones}</p>
-        
-        <div class="modal-footer-badge">
-            Reporte • Instituto Tecnológico de Saltillo • Ingeniería en Sistemas Computacionales
-        </div>
     `;
 
     // Lógica particular para inyectar la sección POST en la Práctica 4 de forma limpia
