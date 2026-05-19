@@ -771,39 +771,56 @@ footer p { margin: 0; }
 }
 
 @media (max-width: 768px) {
-    
+
     header {
-        padding: 1.5rem 1rem;
+        padding: 1.5rem 1rem; 
     }
 
     .header-container {
         flex-direction: column;
         text-align: center;
         justify-content: center;
-        gap: 1.2rem;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .header-text {
+        width: 100%;
     }
 
     .header-text h1 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        white-space: normal;
+        margin-bottom: 0.3rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
     }
 
     .header-logos {
+        display: flex;
         justify-content: center;
+        align-items: center;
         width: 100%;
-        gap: 20px;
+        gap: 24px;
     }
 
     .logo-inst {
-        height: 60px;
+        height: 55px;
     }
 
     .container {
-        padding: 1rem;
+        padding: 0.6rem;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .card {
-        margin-bottom: 1.5rem;
-        width: 100% !important;  
+        margin-bottom: 1.2rem;
+        width: 100% !important;
         box-sizing: border-box;
     }
 
@@ -811,29 +828,29 @@ footer p { margin: 0; }
         font-size: 1.2rem;
     }
 
+    .card-body {
+        padding: 1rem;
+    }
+
     .practicas-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        grid-template-columns: 1fr !important; 
+        gap: 0.8rem;
     }
 
     .practica-item {
         padding: 1.2rem;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .modal-content {
-        width: 95%;
-        margin: 10% auto;
-        padding: 1.5rem;
+        width: 95% !important;
+        padding: 1.2rem;
+        margin: 8% auto;
     }
 
     .modal-grid-2 {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .modal-content table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
+        grid-template-columns: 1fr !important;
+        gap: 0.8rem;
     }
 }
