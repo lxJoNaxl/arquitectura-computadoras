@@ -771,16 +771,69 @@ footer p { margin: 0; }
 }
 
 @media (max-width: 768px) {
+    
+    header {
+        padding: 1.5rem 1rem;
+    }
+
     .header-container {
         flex-direction: column;
         text-align: center;
         justify-content: center;
+        gap: 1.2rem;
     }
+
+    .header-text h1 {
+        font-size: 1.6rem;
+    }
+
     .header-logos {
         justify-content: center;
-        margin-top: 0.5rem;
+        width: 100%;
+        gap: 20px;
     }
+
     .logo-inst {
-        height: 55px;
+        height: 60px;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .card {
+        margin-bottom: 1.5rem;
+        width: 100% !important;  
+        box-sizing: border-box;
+    }
+
+    .card-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .practicas-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .practica-item {
+        padding: 1.2rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 1.5rem;
+    }
+
+    .modal-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .modal-content table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 }
