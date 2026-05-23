@@ -117,11 +117,11 @@ const datosPracticas = {
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 10px;">
                 <div style="background: #111827; padding: 5px; border-radius: 8px; border: 1px solid var(--border-color); text-align: center;">
                     <img src="img/p3/WhatsApp Image 2026-03-26 at 6.41.52 PM (1).jpeg" alt="Inspección de Módulo RAM" style="width: 100%; height: 150px; object-fit: cover; border-radius: 6px;">
-                    <span style="font-size: 0.8rem; color: var(--text-body); display: block; margin-top: 5px;">Inspección Física y lectura de etiqueta</span>
+                    <span style="font-size: 0.8rem; color: var(--text-body); display: block; margin-top: 5px;">Validación de capacidad en Administrador de Tareas</span>
                 </div>
                 <div style="background: #111827; padding: 5px; border-radius: 8px; border: 1px solid var(--border-color); text-align: center;">
                     <img src="img/p3/WhatsApp Image 2026-03-26 at 6.41.52 PM (3).jpeg" alt="Instalación en Ranura DIMM" style="width: 100%; height: 150px; object-fit: cover; border-radius: 6px;">
-                    <span style="font-size: 0.8rem; color: var(--text-body); display: block; margin-top: 5px;">Alineación e inserción en Slot DIMM</span>
+                    <span style="font-size: 0.8rem; color: var(--text-body); display: block; margin-top: 5px;">Inspección Física y lectura de etiqueta</span>
                 </div>
                 <div style="background: #111827; padding: 5px; border-radius: 8px; border: 1px solid var(--border-color); text-align: center;">
                     <img src="img/p3/WhatsApp Image 2026-03-26 at 6.41.50 PM.jpeg" alt="Validación lógica en Windows" style="width: 100%; height: 150px; object-fit: cover; border-radius: 6px;">

@@ -463,45 +463,64 @@
             </div>
         </div>
 
-        <div class="card practicas">
+    <div class="card border-p">
             <div class="card-header bg-p">
-                <h2><i class="fa-solid fa-flask"></i> Prácticas de Laboratorio</h2>
+                <h2><i class="fa-solid fa-screwdriver-wrench animate-pulse"></i> Prácticas de Laboratorio</h2>
                 <span class="unit-tag">Interactivo</span>
             </div>
             <div class="card-body">
-                <p class="instruccion"><i class="fa-solid fa-arrow-pointer animate-bounce"></i> Haz clic sobre una práctica para abrir su reporte completo detallado:</p>
-                
-                <div class="grid-practicas">
-                    
-                    <div class="practica-item" onclick="abrirModal(1)">
-                        <div class="status-indicator"><i class="fa-solid fa-book-bookmark"></i> <span>Ver Reporte</span></div>
-                        <h3>Práctica 1: Desensamble y Armado de Hardware</h3>
-                        <p class="p-desc">Identificación física de componentes internos.</p>
+                <p class="definition">
+                    <strong>Reportes :</strong> Procedimientos de ensamble, mantenimiento preventivo y diagnóstico de hardware real realizados en el laboratorio.
+                </p>
+
+                <div class="grid-2col">
+                    <div class="practica-item">
+                        <div class="click-area" onclick="abrirModal(1)">
+                            <div class="status-indicator"><i class="fa-solid fa-book-bookmark"></i> <span>Ver Reporte</span></div>
+                            <h3>Práctica 1: Desensamble y Armado de Hardware</h3>
+                            <p class="p-desc">Identificación fisica de componentes internos.</p>
+                        </div>
+                        <a href="docs/Practicas/Practica1.pdf" download="Reporte_Practica1_JohnatanRodriguez.pdf" class="btn-download-practica">
+                            <i class="fa-solid fa-file-arrow-down animate-pulse"></i> Descargar Reporte PDF
+                        </a>
                     </div>
 
-                    <div class="practica-item" onclick="abrirModal(2)">
-                        <div class="status-indicator"><i class="fa-solid fa-book-bookmark"></i> <span>Ver Reporte</span></div>
-                        <h3>Práctica 2: Inspección y Análisis de Procesadores Intel</h3>
-                        <p class="p-desc">Estudio técnico profundo y comparativo de microarquitecturas, litografía, frecuencias y sockets de 5 procesadores Intel.</p>
+                    <div class="practica-item">
+                        <div class="click-area" onclick="abrirModal(2)">
+                            <div class="status-indicator"><i class="fa-solid fa-book-bookmark"></i> <span>Ver Reporte</span></div>
+                            <h3>Práctica 2: Arquitecturas de Procesadores en Laboratorio</h3>
+                            <p class="p-desc">Estudio técnico profundo y comparativo de microarquitecturas, litografía, frecuencias y sockets de 5 procesadores Intel.</p>
+                        </div>
+                        <a href="docs/Practicas/Practica2.pdf" download="Reporte_Practica2_JohnatanRodriguez.pdf" class="btn-download-practica">
+                            <i class="fa-solid fa-file-arrow-down animate-pulse"></i> Descargar Reporte PDF
+                        </a>
                     </div>
 
-                    <div class="practica-item" onclick="abrirModal(3)">
-                        <div class="status-indicator"><i class="fa-solid fa-book-bookmark"></i> <span>Ver Reporte</span></div>
-                        <h3>Práctica 3: Identificación e Instalación de Memorias RAM</h3>
-                        <p class="p-desc">Inspección de módulos físicos de 16 GB DDR4 (Samsung y SK Hynix).</p>
+                    <div class="practica-item">
+                        <div class="click-area" onclick="abrirModal(3)">
+                            <div class="status-indicator"><i class="fa-solid fa-book-bookmark"></i> <span>Ver Reporte</span></div>
+                            <h3>Práctica 3: Identificación e Instalación de Memorias RAM</h3>
+                            <p class="p-desc">Inspección de módulos físicos de 16 GB DDR4 (Samsung y SK Hynix).</p>
+                        </div>
+                        <a href="docs/Practicas/Practica3.pdf" download="Reporte_Practica3_JohnatanRodriguez.pdf" class="btn-download-practica">
+                            <i class="fa-solid fa-file-arrow-down animate-pulse"></i> Descargar Reporte PDF
+                        </a>
                     </div>
 
-                    <div class="practica-item" onclick="abrirModal(4)">
-                        <div class="status-indicator"><i class="fa-solid fa-book-bookmark"></i> <span>Ver Reporte</span></div>
-                        <h3>Práctica 4: Extracción de Componentes, Flujo y POST</h3>
-                        <p class="p-desc">Desmontaje y rearmado de equipo de computo.</p>
+                    <div class="practica-item">
+                        <div class="click-area" onclick="abrirModal(4)">
+                            <div class="status-indicator"><i class="fa-solid fa-book-bookmark"></i> <span>Ver Reporte</span></div>
+                            <h3>Práctica 4: Extracción de Componentes, Flujo y POST</h3>
+                            <p class="p-desc">Desmontaje y rearmado de equipo de cómputo.</p>
+                        </div>
+                        <a href="docs/Practicas/Practica4.pdf" download="Reporte_Practica4_JohnatanRodriguez.pdf" class="btn-download-practica">
+                            <i class="fa-solid fa-file-arrow-down animate-pulse"></i> Descargar Reporte PDF
+                        </a>
                     </div>
 
                 </div>
             </div>
         </div>
-
-    </div>
 
     <div id="modalPractica" class="modal">
         <div class="modal-content">
@@ -509,6 +528,71 @@
             <div id="modal-body-content"></div>
         </div>
     </div>
+
+    <div class="card border-tareas">
+            <div class="card-header bg-tareas">
+                <h2><i class="fa-solid fa-file-pdf"></i> Tareas</h2>
+                <span class="unit-tag">Documentación</span>
+            </div>
+            <div class="card-body">
+                <p class="definition-tareas">
+                    <strong>Archivos:</strong> tareas en formato PDF desarrollados a lo largo del periodo académico para la materia de Arquitectura de Computadoras.
+                </p>
+                
+                <div class="grid-2col">
+                    <div class="pdf-item-box">
+                        <div class="pdf-icon-side">
+                            <i class="fa-solid fa-file-invoice animate-pulse"></i>
+                        </div>
+                        <div class="pdf-details-side">
+                            <h4>Investigación de Procesadores</h4>
+                            <a href="docs/Tareas/Procesadores JohnatanRodriguezVIgil.pdf" download="Investigacion_Procesadores_JohnatanRodriguez.pdf" class="btn-download-pdf">
+                                <i class="fa-solid fa-cloud-arrow-down"></i> Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="pdf-item-box">
+                        <div class="pdf-icon-side">
+                            <i class="fa-solid fa-layer-group animate-pulse"></i>
+                        </div>
+                        <div class="pdf-details-side">
+                            <h4>Gamas de Equipos de Cómputo</h4>
+                            <a href="docs/Tareas/Gamas de equipos de computo.pdf" download="Gamas_de_equipos_de_computo.pdf" class="btn-download-pdf">
+                                <i class="fa-solid fa-cloud-arrow-down"></i> Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2col margin-top" style="margin-top: 1.5rem;">
+                    <div class="pdf-item-box">
+                        <div class="pdf-icon-side">
+                            <i class="fa-solid fa-laptop-code animate-pulse"></i>
+                        </div>
+                        <div class="pdf-details-side">
+                            <h4>Diseño de Equipos de Cómputo</h4>
+                            <a href="docs/Tareas/Diseñó de equipos.pdf" download="Diseno_de_equipos.pdf" class="btn-download-pdf">
+                                <i class="fa-solid fa-cloud-arrow-down"></i> Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="pdf-item-box">
+                        <div class="pdf-icon-side">
+                            <i class="fa-solid fa-tags animate-pulse"></i>
+                        </div>
+                        <div class="pdf-details-side">
+                            <h4>Cotización de Equipos</h4>
+                            <a href="docs/Tareas/Cotización de equipos.pdf" download="Cotizacion_de_equipos.pdf" class="btn-download-pdf">
+                                <i class="fa-solid fa-cloud-arrow-down"></i> Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
     <footer>
         <p><i class="fa-solid fa-graduation-cap"></i> | xJoNax | 2026</p>
