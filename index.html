@@ -1,603 +1,870 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arquitectura de Cómputo - Temario Oficial</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arquitectura de Computadoras — Temario Oficial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="header-text">
-                <h1><i class="fa-solid fa-microchip animate-pulse"></i> Arquitectura de Computadoras</h1>
-                <p class="subtitle">Ingeniería en Sistemas Computacionales</p>
-            </div>
 
-            <div class="header-logos">
-                <img src="img/logos/tecnologico_nacional_de_mexico_campus_saltillo_cover-removebg-preview.png" alt="Logo TecNM" class="logo-inst logo-tecnm">
-                <img src="img/logos/escudo_2977c841a7.png" alt="Escudo ITS" class="logo-inst logo-its">
-            </div>
-        </div>
-    </header>
-    <div class="container">
-
-        <div class="card border-u1">
-            <div class="card-header bg-u1">
-                <h2><i class="fa-solid fa-layer-group"></i> Unidad 1: Arquitecturas de Cómputo</h2>
-                <span class="unit-tag">Teoría Fundamental</span>
-            </div>
-            <div class="card-body">
-                
-                <div class="info-block">
-                    <h3>1.1 Modelos de Arquitecturas de Cómputo</h3>
-                    <p class="definition"><strong>Definición:</strong> Es el conjunto de reglas, principios y estándares que definen la estructura y el diseño de los componentes de hardware y software de un sistema informático.</p>
-                    
-                    <div class="grid-2col">
-                        <div class="nested-box">
-                            <h4><i class="fa-solid fa-server"></i> Modelo Clásico (Von Neumann)</h4>
-                            <p>Creado en la década de 1940. Se basa en una Unidad Central de Procesamiento (CPU) que accede a una memoria compartida donde se guardan tanto los datos como los programas, comunicándose a través de un bus común. Esto genera un límite de velocidad conocido como el <em>cuello de botella de Von Neumann</em>.</p>
-                        </div>
-                        <div class="nested-box">
-                            <h4><i class="fa-solid fa-code-fork"></i> Arquitectura Harvard</h4>
-                            <p>A diferencia de Von Neumann, utiliza memorias físicamente separadas para instrucciones (programas) y para datos. Esto permite a la CPU acceder a ambos flujos simultáneamente, mejorando drásticamente el rendimiento global.</p>
-                        </div>
-                    </div>
-
-                    <div class="grid-2col margin-top">
-                        <div class="nested-box">
-                            <h4><i class="fa-solid fa-gears"></i> Segmentado (Pipeline)</h4>
-                            <p>Divide el procesador en unidades funcionales independientes para realizar paralelamente varias etapas del ciclo de instrucción al mismo tiempo, emulando una línea de ensamblaje industrial.</p>
-                        </div>
-                        <div class="nested-box">
-                            <h4><i class="fa-solid fa-network-wired"></i> Multiprocesamiento</h4>
-                            <p>Utiliza más de un procesador para ejecutar una aplicación y superar los límites de la segmentación. Se organiza según la <strong>Clasificación de Flynn</strong> en:</p>
-                            <ul class="custom-bullets">
-                                <li><strong>SISO:</strong> Monoprocesador clásico.</li>
-                                <li><strong>SIMO:</strong> Procesadores vectoriales.</li>
-                                <li><strong>MISO:</strong> Arquitectura teórica no implementada.</li>
-                                <li><strong>MIMO:</strong> Sistemas SMP, Clusters y GPUs modernas.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-block">
-                    <h3>1.2 Análisis de los Componentes</h3>
-                    <p>Los elementos operativos del computador se categorizan en dos grandes ecosistemas:</p>
-                    <div class="grid-2col">
-                        <div class="list-container">
-                            <h5><i class="fa-solid fa-circle-dot color-u1"></i> Componentes Internos</h5>
-                            <ul>
-                                <li><strong>Procesador (CPU):</strong> Cerebro lógico y aritmético del sistema.</li>
-                                <li><strong>Placa Base (Motherboard):</strong> Plataforma de integración que aloja el Firmware.</li>
-                                <li><strong>Fuente de Poder:</strong> Suministra y regula la energía eléctrica.</li>
-                                <li><strong>Memoria RAM:</strong> Almacenamiento volátil de acceso ultrarrápido.</li>
-                                <li><strong>Almacenamiento:</strong> Espacio permanente (SSD/HDD) para el SO.</li>
-                                <li><strong>Co-procesadores:</strong> Tarjeta de video (GPU), red, sonido y disipadores.</li>
-                            </ul>
-                        </div>
-                        <div class="list-container">
-                            <h5><i class="fa-solid fa-circle-dot color-u1"></i> Componentes Externos (Periféricos)</h5>
-                            <ul>
-                                <li><strong>Dispositivos de Entrada:</strong> Monitor táctil, teclado, mouse, escáner, micrófonos, webcams.</li>
-                                <li><strong>Dispositivos de Salida:</strong> Monitor principal, impresoras, altavoces, audífonos de monitorización.</li>
-                                <li><strong>Dispositivos Mixtos:</strong> Memorias de almacenamiento USB, unidades de red externas.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-block">
-                    <h3>1.3 Enfoques de Arquitectura de Procesadores</h3>
-                    <div class="grid-2col">
-                        <div class="concept-card border-left-u1">
-                            <span class="tech-badge">RISC</span>
-                            <h5>Reduced Instruction Set Computer</h5>
-                            <p>Usa un conjunto de instrucciones reducido y optimizado. Ejecuta casi todas las instrucciones en un solo ciclo de reloj. Es la base de la eficiencia energética en teléfonos móviles (ARM) y servidores modernos.</p>
-                        </div>
-                        <div class="concept-card border-left-u1">
-                            <span class="tech-badge">CISC</span>
-                            <h5>Complex Instruction Set Computer</h5>
-                            <p>Utiliza un conjunto de instrucciones más amplio y complejo capaz de realizar tareas sofisticadas por ciclo. Facilita el desarrollo de software de alto nivel pero requiere microarquitecturas de decodificación masivas (x86).</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-block">
-                    <h3>1.4 Profundización en la CPU y Memorias</h3>
-                    <ul class="feature-list">
-                        <li><strong>Componentes de la CPU:</strong> La <strong>ALU</strong> (Unidad Aritmética Lógica) ejecuta las operaciones matemáticas y lógicas elementales (AND, OR, sumas). La <strong>Unidad de Control (UC)</strong> interpreta, decodifica y coordina la ejecución de cada instrucción.</li>
-                        <li><strong>Tipos de Memoria Principal:</strong> La <strong>RAM</strong> es la memoria a corto plazo que actúa como búfer dinámico. La <strong>ROM</strong> es un almacenamiento no volátil permanente para el firmware de arranque básico (BIOS/UEFI). La <strong>Caché</strong> es memoria estática (SRAM) de velocidad extrema dividida en niveles (L1, L2, L3) para mitigar la latencia de la RAM.</li>
-                    </ul>
-                </div>
-
-                <div class="info-block">
-                    <h3>1.5 Módulos de Entrada/Salida (E/S) y Gestión de Datos</h3>
-                    <ul class="feature-list">
-                        <li><strong>Módulos de E/S:</strong> Interfaces encargadas de resolver las diferencias de velocidades, voltajes y formatos entre la CPU y los periféricos. Se controlan mediante E/S Programada o mediante Interrupciones de hardware.</li>
-                        <li><strong>Acceso Directo a Memoria (DMA):</strong> Módulo especial que permite a los periféricos transferir datos directamente hacia y desde la memoria RAM sin usar a la CPU como intermediaria, liberando al procesador de cargas de trabajo masivas.</li>
-                    </ul>
-                </div>
-
-                <div class="info-block">
-                    <h3>1.6 Buses e Interrupciones</h3>
-                    <ul class="feature-list">
-                        <li><strong>Buses:</strong> Autopistas de datos electrónicas. Se clasifican por función: <em>Bus de datos</em>, <em>Bus de direcciones</em> (mapeo de memoria) y <em>Bus de control</em> (sincronización).</li>
-                        <li><strong>Interrupciones:</strong> Mecanismo físico que altera el orden lógico de ejecución para atender un evento urgente de hardware. Evita la técnica de **poleo (polling)**, en la cual la CPU gasta ciclos de reloj consultando activamente si un periférico requiere atención.</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="card border-u2">
-            <div class="card-header bg-u2">
-                <h2><i class="fa-solid fa-cpu"></i> Unidad 2: Estructura y Funcionamiento del Procesador</h2>
-                <span class="unit-tag">Microarquitectura</span>
-            </div>
-            <div class="card-body">
-                
-                <div class="info-block">
-                    <h3>2.1 Organizacion del Procesador</h3>
-                    <p>La CPU procesa instrucciones y coordina todas las operaciones del sistema. Para optimizar el rendimiento, implementa la **Segmentación (Pipelining)**, permitiendo procesar de manera simultánea diferentes etapas de varias instrucciones a la vez en una estructura de cascada.</p>
-                </div>
-
-                <div class="info-block">
-                    <h3>2.2 Estructura de Registros</h3>
-                    <p>Los registros son celdas de almacenamiento de velocidad extrema integradas dentro del propio procesador. Se dividen en dos categorías principales:</p>
-                    
-                    <div class="grid-2col">
-                        <div class="nested-box">
-                            <h4 class="color-u2"><i class="fa-solid fa-eye"></i> A. Registros Visibles para el Usuario</h4>
-                            <p>Manipulados directamente por los programadores de lenguaje ensamblador:</p>
-                            <ul class="custom-bullets">
-                                <li><strong>Registros de Datos:</strong> Acumuladores lógicos para cálculos matemáticos inmediatos.</li>
-                                <li><strong>Registros de Direcciones:</strong> Almacenan punteros e índices de segmentos de memoria.</li>
-                                <li><strong>Registros de Índice:</strong> Utilizados para recorrer arreglos de datos mediante autoincrementos.</li>
-                            </ul>
-                        </div>
-                        <div class="nested-box">
-                            <h4 class="color-u2"><i class="fa-solid fa-eye-slash"></i> B. Registros de Control y Estado</h4>
-                            <p>Uso exclusivo de la Unidad de Control para mantener el orden secuencial del sistema:</p>
-                            <ul class="custom-bullets">
-                                <li><strong>Contador de Programa (PC):</strong> Contiene la dirección de la siguiente instrucción a ejecutar.</li>
-                                <li><strong>Registro de Instrucción (IR / CIR):</strong> Almacena la instrucción actual mientras se decodifica.</li>
-                                <li><strong>Registro de Dirección de Memoria (MAR):</strong> Apunta a la dirección física de la RAM que se va a leer o escribir.</li>
-                                <li><strong>Registro Intermedio de Memoria (MBR):</strong> Retiene temporalmente el dato binario transferido desde o hacia la memoria.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-block">
-                    <h3>2.3 El Ciclo de Instrucción (Ciclo FDE)</h3>
-                    <p>Línea de tiempo del procesamiento síncrono elemental:</p>
-                    
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-icon bg-u2">1</div>
-                            <div class="timeline-content">
-                                <h5>Búsqueda (Fetch)</h5>
-                                <p>El PC envía la dirección a la memoria principal; la instrucción se aloja en el registro CIR y el PC se incrementa para apuntar a la siguiente celda de memoria.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-icon bg-u2">2</div>
-                            <div class="timeline-content">
-                                <h5>Decodificación (Decode)</h5>
-                                <p>La UC interpreta el código de operación (opcode), identifica los operandos involucrados y prepara las rutas de datos internas.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-icon bg-u2">3</div>
-                            <div class="timeline-content">
-                                <h5>Ejecución (Execute)</h5>
-                                <p>La ALU realiza la operación (sumas, operaciones lógicas, saltos) y los resultados se guardan en registros internos o se escriben de vuelta en la RAM.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-block">
-                    <h3>2.4 Modos de Direccionamiento</h3>
-                    <p>Metodologías lógicas para localizar datos. Un error de direccionamiento puede provocar fallos masivos de seguridad del sistema.</p>
-                    
-                    <div class="table-responsive">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Modo de Direccionamiento</th>
-                                    <th>Mecanismo de Operación</th>
-                                    <th>Ejemplo de Código</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Inmediato</strong></td>
-                                    <td>El dato u operando está incluido dentro de la misma instrucción.</td>
-                                    <td><code>MOV AX, 0ABCDH</code></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Directo (Absoluto)</strong></td>
-                                    <td>La instrucción contiene la dirección de memoria exacta del dato.</td>
-                                    <td><code>MOV BX, [1234H]</code></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Por Registro</strong></td>
-                                    <td>El operando reside dentro de un registro interno del procesador.</td>
-                                    <td><code>MOV AX, CX</code></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Indirecto</strong></td>
-                                    <td>Apunta a un registro que contiene la dirección RAM real. Base de los punteros.</td>
-                                    <td><code>MOV AX, [BX]</code></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Indexado y Base + Índice</strong></td>
-                                    <td>Combina un registro base, un registro índice y un desplazamiento constante.</td>
-                                    <td><code>MOV AX, [BX+SI+8]</code></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="info-block">
-                    <h3>2.5 Casos de Estudio Reales</h3>
-                    <div class="grid-2col">
-                        <div class="case-card border-u2">
-                            <h5><i class="fa-solid fa-shield-virus"></i> Caso 1: Gusano Code Red (2001)</h5>
-                            <p>Una aplicación web en C utilizó la función de copiado <code>strcpy</code> con direccionamiento indirecto hacia un búfer sin validar los límites. Un atacante inyectó una cadena que sobrescribió la pila y modificó la dirección del Contador de Programa (PC), infectando a más de 350,000 servidores corporativos en 14 horas.</p>
-                        </div>
-                        <div class="case-card border-u2">
-                            <h5><i class="fa-solid fa-car-on"></i> Caso 2: Memoria Mapeada en ARM Cortex-M</h5>
-                            <p>Los periféricos embebidos (GPIO o UART) de un vehículo se controlan mapeándolos directamente en la memoria mediante direccionamiento indexado. Esto permite hacer manipulación física y control de hardware de velocidad crítica automotriz sin demoras.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="card border-u3">
-            <div class="card-header bg-u3">
-                <h2><i class="fa-solid fa-screwdriver-wrench"></i> Unidad 3: Selección de Componentes para Ensamble</h2>
-                <span class="unit-tag">Infraestructura</span>
-            </div>
-            <div class="card-body">
-                
-                <div class="info-block">
-                    <h3>3.1 El Chipset (Conjunto de Chips)</h3>
-                    <p>Actúa como el nodo logístico de la placa base, administrando la comunicación entre la CPU y los demás componentes.</p>
-                    <div class="grid-2col">
-                        <div class="nested-box">
-                            <h4>Puente Norte (Northbridge)</h4>
-                            <p>Controlaba históricamente los componentes de máxima velocidad: CPU, memoria RAM y ranuras de video PCIe. <em>Nota moderna: Actualmente estas funciones están integradas directamente en el silicio de los procesadores actuales.</em></p>
-                        </div>
-                        <div class="nested-box">
-                            <h4>Puente Sur (Southbridge)</h4>
-                            <p>Se encarga de los componentes periféricos y de velocidades más bajas: controladores de almacenamiento (SATA/NVMe), puertos USB, audio integrado, tarjetas de red y ranuras de expansión secundarias.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-block">
-                    <h3>3.2 Componentes Centrales del Ensamble</h3>
-                    <div class="grid-3col">
-                        <div class="spec-box">
-                            <h5><i class="fa-solid fa-microchip color-u3"></i> Procesador</h5>
-                            <p>Se deben evaluar variables críticas como velocidad de reloj (GHz), núcleos e hilos de procesamiento, memoria caché integrada, consumo térmico de diseño (TDP) y el socket de montaje compatible con la tarjeta madre.</p>
-                        </div>
-                        <div class="spec-box">
-                            <h5><i class="fa-solid fa-memory color-u3"></i> Memoria RAM</h5>
-                            <p>Factores clave: Capacidad de almacenamiento (GB), velocidad nativa de operación (MHz), tecnología de transferencia (DDR4, DDR5) y las latencias internas CAS (CL).</p>
-                        </div>
-                        <div class="spec-box">
-                            <h5><i class="fa-solid fa-square-poll-horizontal color-u3"></i> Placa Base</h5>
-                            <p>Variables: Factor de forma del gabinete (ATX, Micro-ATX, Mini-ITX), chipset integrado, compatibilidad de Socket, fases de poder del procesador (VRM) y puertos de expansión de última generación (M.2, PCIe).</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-block">
-                    <h3>3.3 Almacenamiento y Alimentación</h3>
-                    <p>Comparativa de rendimiento en transferencia de datos de discos duros y unidades de estado sólido:</p>
-                    
-                    <div class="chart-container">
-                        <div class="chart-row">
-                            <span class="chart-label">HDD Mecánico</span>
-                            <div class="chart-bar-bg"><div class="chart-bar bar1">160 MB/s</div></div>
-                        </div>
-                        <div class="chart-row">
-                            <span class="chart-label">SSD SATA</span>
-                            <div class="chart-bar-bg"><div class="chart-bar bar2">560 MB/s</div></div>
-                        </div>
-                        <div class="chart-row">
-                            <span class="chart-label">SSD M.2 NVMe</span>
-                            <div class="chart-bar-bg"><div class="chart-bar bar3">7,500 MB/s</div></div>
-                        </div>
-                    </div>
-
-                    <p class="margin-top"><strong>Fuentes de Alimentación (PSU):</strong> Convierte la corriente alterna (CA) en corriente continua (CC) regulada. Es indispensable validar la potencia total requerida (Watts), el tipo de cableado (Modular para optimizar espacio) y las certificaciones de eficiencia energética (<strong>80 Plus Bronze, Gold, Platinum</strong>).</p>
-                </div>
-
-                <div class="info-block">
-                    <h3>3.4 Ambientes de Servicio</h3>
-                    <div class="grid-3col">
-                        <div class="env-box">
-                            <h4>Negocios</h4>
-                            <p>Sistemas enfocados en la automatización ofimática, administración de bases de datos relacionales y optimización del tiempo de respuesta empresarial.</p>
-                        </div>
-                        <div class="env-box">
-                            <h4>Industria</h4>
-                            <p>Hardware para el control de líneas de producción automatizadas, robótica pesada, logística física de inventarios y sistemas tolerantes a ambientes hostiles.</p>
-                        </div>
-                        <div class="env-box">
-                            <h4>Comercio Electrónico</h4>
-                            <p>Servidores escalables de alta disponibilidad, pasarelas de pago digitales seguras, cifrado criptográfico y procesamiento continuo de datos en la nube.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="card border-u4">
-            <div class="card-header bg-u4">
-                <h2><i class="fa-solid fa-network-wired"></i> Unidad 4: Procesamiento Paralelo</h2>
-                <span class="unit-tag">Alto Rendimiento</span>
-            </div>
-            <div class="card-body">
-                
-                <div class="info-block">
-                    <h3>4.1 Aspectos Básicos de la Computación Paralela</h3>
-                    <p>Forma de cómputo en la que muchas instrucciones se ejecutan simultáneamente, fragmentando problemas complejos en subtareas concurrentes de manera eficiente.</p>
-                    <div class="grid-2col">
-                        <div class="nested-box">
-                            <h5>Sincronización</h5>
-                            <p>Mecanismos de control lógico para coordinar el acceso a datos y evitar la corrupción de variables por condiciones de carrera.</p>
-                        </div>
-                        <div class="nested-box">
-                            <h5>Balance de Carga</h5>
-                            <p>Estrategia para distribuir las tareas equitativamente entre los núcleos y evitar procesadores inactivos o saturados.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-block">
-                    <h3>4.2 Clasificación del Paralelismo</h3>
-                    <ul class="custom-bullets">
-                        <li><strong>A Nivel de Bit:</strong> Incremento en la longitud de palabra del procesador (migración histórica de registros de 32 bits a 64 bits), disminuyendo los ciclos requeridos para operar números grandes.</li>
-                        <li><strong>A Nivel de Instrucción (ILP):</strong> El procesador reordena y combina instrucciones para ejecutarlas de forma simultánea (Pipelining / ejecución superescalar).</li>
-                        <li><strong>Paralelismo de Datos:</strong> Distribuye bloques masivos de datos a lo largo de un arreglo de núcleos simples que ejecutan simultáneamente la misma instrucción (Arquitectura nativa de las **GPUs**).</li>
-                        <li><strong>A Nivel de Tarea:</strong> Hilos o procesos independientes ejecutan tareas completamente diferentes sobre conjuntos de datos iguales o distintos.</li>
-                    </ul>
-                </div>
-
-                <div class="info-block">
-                    <h3>4.3 Limitaciones del Modelo Secuencial Clásico</h3>
-                    <p>La computación monoprocesador tradicional llegó a un límite debido a dos barreras físicas: el **Muro Térmico** (el incremento excesivo de frecuencia genera un calor inmanejable que destruye el silicio) y el **Muro de la Memoria** (la velocidad de procesamiento avanza exponencialmente más rápido que los tiempos de acceso a la RAM). Esto forzó el desarrollo de arquitecturas de múltiples núcleos.</p>
-                </div>
-
-                <div class="info-block">
-                    <h3>4.4 Clasificación (Taxonomía de Flynn)</h3>
-                    <div class="table-responsive">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Clasificación</th>
-                                    <th>Flujo de Instrucciones</th>
-                                    <th>Flujo de Datos</th>
-                                    <th>Arquitectura Común Real</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>SISD</strong></td>
-                                    <td>Único</td>
-                                    <td>Único</td>
-                                    <td>Computación secuencial clásica (Monoprocesador).</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>SIMD</strong></td>
-                                    <td>Único</td>
-                                    <td>Múltiple</td>
-                                    <td>Procesadores vectoriales y Unidades de Procesamiento Gráfico (**GPUs**).</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>MISD</strong></td>
-                                    <td>Múltiple</td>
-                                    <td>Único</td>
-                                    <td>Poco común. Empleado en sistemas redundantes de alta tolerancia a fallos (Aeroespacial).</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>MIMD</strong></td>
-                                    <td>Múltiple</td>
-                                    <td>Múltiple</td>
-                                    <td>Procesadores multinúcleo comerciales, supercomputadoras y Clusters modernos.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="info-block">
-                    <h3>4.5 Organización de Direcciones de Memoria</h3>
-                    <div class="grid-2col">
-                        <div class="nested-box">
-                            <h4>A. Memoria Compartida (Sistemas Multiprocesador - SMP)</h4>
-                            <p>Todos los núcleos comparten un único espacio de direccionamiento global. Se subdivide en **UMA** (mismos tiempos de acceso para todos los núcleos) y **NUMA** (el tiempo de acceso depende de la cercanía física del procesador al módulo de memoria RAM).</p>
-                        </div>
-                        <div class="nested-box">
-                            <h4>B. Memoria Distribuida (Sistemas Multicomputador - Clusters)</h4>
-                            <p>Cada nodo cuenta con su propia memoria física privada y exclusiva. No existe un espacio común. La comunicación obligatoria de datos e interconexión entre nodos se realiza mediante el paso de mensajes estructurados a través de una red dedicada.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-block">
-                    <h3>4.6 Redes de Interconexión Estáticas</h3>
-                    <p>Enlaces de hardware físicos fijos entre los nodos que no cambian durante la ejecución del software. Topologías comunes: <em>Lineal, Anillo, Estrella, Malla (Mesh), Árbol y de Hipercubo</em>. Ofrecen una alta eficiencia en comunicaciones de nodos cercanos, pero escalarlas a gran escala eleva drásticamente el costo físico de cableado estructural.</p>
-                </div>
-
-                <div class="info-block">
-                    <h3>4.7 Casos de Estudio Reales</h3>
-                    <div class="grid-3col">
-                        <div class="case-card border-u4">
-                            <h5>Intel Core / Xeon</h5>
-                            <p>Implementa un bus en anillo (Ring Bus) interno para interconectar los núcleos de computadoras de escritorio, y arquitecturas de malla (Mesh) de alto rendimiento para procesadores masivos orientados a servidores corporativos Xeon.</p>
-                        </div>
-                        <div class="case-card border-u4">
-                            <h5>AMD Ryzen (Chiplet)</h5>
-                            <p>Reemplaza el diseño monolítico grande por pequeños bloques funcionales independientes interconectados a máxima velocidad mediante su tecnología propietaria de buses lógicos denominada <strong>Infinity Fabric</strong>.</p>
-                        </div>
-                        <div class="case-card border-u4">
-                            <h5>NVIDIA GPUs</h5>
-                            <p>Diseñadas puramente bajo el enfoque SIMD. Mientras un CPU típico tiene pocos núcleos potentes, una GPU integra miles de núcleos pequeños optimizados para resolver cálculos matemáticos paralelos simultáneos (IA y Renderizado).</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    <div class="card border-p">
-            <div class="card-header bg-p">
-                <h2><i class="fa-solid fa-screwdriver-wrench animate-pulse"></i> Prácticas de Laboratorio</h2>
-                <span class="unit-tag">Interactivo</span>
-            </div>
-            <div class="card-body">
-                <p class="definition">
-                    <strong>Reportes :</strong> Procedimientos de ensamble, mantenimiento preventivo y diagnóstico de hardware real realizados en el laboratorio.
-                </p>
-
-                <div class="grid-2col">
-                    <div class="practica-item">
-                        <div class="click-area" onclick="abrirModal(1)">
-                            <div class="status-indicator"><i class="fa-solid fa-book-bookmark"></i> <span>Ver Reporte</span></div>
-                            <h3>Práctica 1: Desensamble y Armado de Hardware</h3>
-                            <p class="p-desc">Identificación fisica de componentes internos.</p>
-                        </div>
-                        <a href="docs/Practicas/Practica1.pdf" download="Reporte_Practica1_JohnatanRodriguez.pdf" class="btn-download-practica">
-                            <i class="fa-solid fa-file-arrow-down animate-pulse"></i> Descargar Reporte PDF
-                        </a>
-                    </div>
-
-                    <div class="practica-item">
-                        <div class="click-area" onclick="abrirModal(2)">
-                            <div class="status-indicator"><i class="fa-solid fa-book-bookmark"></i> <span>Ver Reporte</span></div>
-                            <h3>Práctica 2: Arquitecturas de Procesadores en Laboratorio</h3>
-                            <p class="p-desc">Estudio técnico profundo y comparativo de microarquitecturas, litografía, frecuencias y sockets de 5 procesadores Intel.</p>
-                        </div>
-                        <a href="docs/Practicas/Practica2.pdf" download="Reporte_Practica2_JohnatanRodriguez.pdf" class="btn-download-practica">
-                            <i class="fa-solid fa-file-arrow-down animate-pulse"></i> Descargar Reporte PDF
-                        </a>
-                    </div>
-
-                    <div class="practica-item">
-                        <div class="click-area" onclick="abrirModal(3)">
-                            <div class="status-indicator"><i class="fa-solid fa-book-bookmark"></i> <span>Ver Reporte</span></div>
-                            <h3>Práctica 3: Identificación e Instalación de Memorias RAM</h3>
-                            <p class="p-desc">Inspección de módulos físicos de 16 GB DDR4 (Samsung y SK Hynix).</p>
-                        </div>
-                        <a href="docs/Practicas/Practica3.pdf" download="Reporte_Practica3_JohnatanRodriguez.pdf" class="btn-download-practica">
-                            <i class="fa-solid fa-file-arrow-down animate-pulse"></i> Descargar Reporte PDF
-                        </a>
-                    </div>
-
-                    <div class="practica-item">
-                        <div class="click-area" onclick="abrirModal(4)">
-                            <div class="status-indicator"><i class="fa-solid fa-book-bookmark"></i> <span>Ver Reporte</span></div>
-                            <h3>Práctica 4: Extracción de Componentes, Flujo y POST</h3>
-                            <p class="p-desc">Desmontaje y rearmado de equipo de cómputo.</p>
-                        </div>
-                        <a href="docs/Practicas/Practica4.pdf" download="Reporte_Practica4_JohnatanRodriguez.pdf" class="btn-download-practica">
-                            <i class="fa-solid fa-file-arrow-down animate-pulse"></i> Descargar Reporte PDF
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    <div id="modalPractica" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="cerrarModal()">&times;</span>
-            <div id="modal-body-content"></div>
-        </div>
+<header>
+  <div class="header-container">
+    <div class="header-text">
+      <h1><i class="fa-solid fa-microchip animate-pulse"></i> Arquitectura de Computadoras</h1>
+      <p class="subtitle">Ingeniería en Sistemas Computacionales &nbsp;·&nbsp; TecNM Saltillo</p>
     </div>
+    <div class="header-logos">
+      <img src="img/logos/tecnologico_nacional_de_mexico_campus_saltillo_cover-removebg-preview.png"
+           alt="Logo TecNM" class="logo-inst logo-tecnm">
+      <img src="img/logos/escudo_2977c841a7.png"
+           alt="Escudo ITS" class="logo-inst logo-its">
+    </div>
+  </div>
+</header>
 
-    <div class="card border-tareas">
-            <div class="card-header bg-tareas">
-                <h2><i class="fa-solid fa-file-pdf"></i> Tareas</h2>
-                <span class="unit-tag">Documentación</span>
+<nav class="nav-bar">
+  <div class="nav-inner">
+    <a href="#unidad1" class="nav-link u1" data-target="unidad1">
+      <i class="fa-solid fa-layer-group"></i> U1 Modelos
+    </a>
+    <a href="#unidad2" class="nav-link u2" data-target="unidad2">
+      <i class="fa-solid fa-cpu"></i> U2 Procesador
+    </a>
+    <a href="#unidad3" class="nav-link u3" data-target="unidad3">
+      <i class="fa-solid fa-screwdriver-wrench"></i> U3 Ensamble
+    </a>
+    <a href="#unidad4" class="nav-link u4" data-target="unidad4">
+      <i class="fa-solid fa-network-wired"></i> U4 Paralelo
+    </a>
+    <a href="#practicas" class="nav-link up" data-target="practicas">
+      <i class="fa-solid fa-flask-vial"></i> Prácticas
+    </a>
+    <a href="#tareas" class="nav-link ut" data-target="tareas">
+      <i class="fa-solid fa-file-pdf"></i> Tareas
+    </a>
+  </div>
+</nav>
+
+<div class="container">
+  <!-- ────────────────────────────────────────────────────── -->
+  <!--  UNIDAD 1                                              -->
+  <!-- ────────────────────────────────────────────────────── -->
+  <div class="card border-u1" id="unidad1">
+    <div class="card-header">
+      <h2><i class="fa-solid fa-layer-group animate-pulse"></i> Unidad 1: Modelos de Arquitecturas de Cómputo</h2>
+    </div>
+    <div class="card-body">
+
+      <!-- 1.1 -->
+      <div class="subsection-title">1.1 Modelos de Arquitecturas de Cómputo</div>
+
+      <div class="definition">
+        <strong>¿Qué es una arquitectura de computadora?</strong> Es el conjunto de reglas, principios y estándares que definen la estructura y el diseño de los componentes de hardware y software de un sistema informático. Abarca desde los circuitos electrónicos y la lógica digital hasta los sistemas operativos y las aplicaciones, constituyendo la base conceptual y técnica para la creación de computadoras funcionales.
+      </div>
+
+      <h4>Clásico (Von Neumann)</h4>
+      <p>Propuesto por John Von Neumann en la década de 1940, sirvió de base para la computadora EDVAC y para el diseño de los ordenadores actuales. Se fundamenta en una CPU que accede a una memoria compartida donde se almacenan tanto datos como instrucciones, recuperados a través de un bus común.</p>
+      <div class="img-container-u1">
+        <img src="img/u1/Von Neumann.jpg" alt="Diagrama Arquitectura Von Neumann" class="img-subtema">
+      </div>
+
+      <h4>Arquitectura de Harvard</h4>
+      <p>Similar a Von Neumann pero con memorias físicamente separadas para instrucciones y datos. La CPU accede a ambas simultáneamente, mejorando el rendimiento en procesamiento de señales y tareas de acceso paralelo intensivo.</p>
+      <div class="img-container-u1">
+        <img src="img/u1/Harvard.jpg" alt="Diagrama Arquitectura Harvard" class="img-subtema">
+      </div>
+
+      <h4>Segmentado (Pipeline)</h4>
+      <p>Busca mejorar el desempeño procesando en paralelo varias etapas del ciclo de instrucción. El procesador se divide en unidades funcionales independientes que comparten el procesamiento de instrucciones en cascada.</p>
+      <div class="img-container-u1">
+        <img src="img/u1/Segmentado.JPG" alt="Arquitectura Segmentada Pipeline" class="img-subtema">
+      </div>
+
+      <h4>Multiprocesamiento</h4>
+      <p>Cuando el pipeline alcanza su límite teórico (una instrucción por ciclo de reloj), se recurre a múltiples procesadores para incrementar el desempeño. La Clasificación de Flynn organiza estos esquemas:</p>
+      <div class="img-container-u1">
+        <img src="img/u1/Multiprocesamiento.JPG" alt="Esquema Multiprocesamiento" class="img-subtema">
+      </div>
+      <ul>
+        <li><strong>SISO (Single Instruction, Single Operand):</strong> Computadoras monoprocesador.</li>
+        <li><strong>SIMO (Single Instruction, Multiple Operand):</strong> Procesadores vectoriales, extensiones MMX.</li>
+        <li><strong>MISO (Multiple Instruction, Single Operand):</strong> No implementado en la práctica.</li>
+        <li><strong>MIMO (Multiple Instruction, Multiple Operand):</strong> SMP, Clusters, GPUs.</li>
+      </ul>
+
+      <!-- 1.2 -->
+      <div class="subsection-title">1.2 Análisis de los Componentes</div>
+
+      <div class="definition">
+        <strong>¿Qué son los componentes de una computadora?</strong> Son los elementos físicos (hardware) esenciales que, al trabajar en conjunto, permiten su funcionamiento. Pueden ser internos (dentro del chasis) o externos (periféricos).
+      </div>
+
+      <h4>Componentes Internos</h4>
+      <ul>
+        <li><strong>Procesador (CPU):</strong> Circuito electrónico que actúa como cerebro lógico y aritmético, ejecutando miles de millones de cálculos por segundo.</li>
+        <li><strong>Placa base (Motherboard):</strong> Núcleo del sistema que integra todos los componentes internos y aloja el Firmware.</li>
+        <li><strong>Fuente de poder:</strong> Suministra energía eléctrica regulada a la placa base y demás componentes.</li>
+        <li><strong>RAM:</strong> Memoria de Acceso Aleatorio donde se cargan los programas en ejecución. Su contenido se pierde al apagar el equipo.</li>
+        <li><strong>Almacenamiento:</strong> Guarda la información permanente del sistema (SO, aplicaciones y archivos).</li>
+        <li><strong>Cables de datos:</strong> Transmiten información entre los componentes de la Motherboard.</li>
+        <li><strong>Tarjeta de video (GPU):</strong> Especializada en el procesamiento de imágenes y video para monitores y proyectores.</li>
+        <li><strong>Tarjeta de sonido:</strong> Procesa señales de audio; normalmente integrada en la placa base.</li>
+        <li><strong>Tarjeta de red:</strong> Administra las conexiones de red cableadas e inalámbricas del sistema.</li>
+        <li><strong>Disipador/Ventilador:</strong> Mantiene la temperatura del CPU dentro de rangos seguros de operación.</li>
+      </ul>
+
+      <h4>Componentes Externos</h4>
+      <ul>
+        <li><strong>Monitor:</strong> Muestra la salida visual del sistema mediante puertos como HDMI, VGA o DisplayPort.</li>
+        <li><strong>Teclado y mouse:</strong> Permiten la entrada de comandos, texto y acciones de navegación.</li>
+        <li><strong>Impresora y Escáner:</strong> Imprimen en papel y digitalizan documentos e imágenes respectivamente.</li>
+        <li><strong>Audífonos y Altavoces:</strong> Reproducen de forma personal o ambiental el audio del equipo.</li>
+        <li><strong>Micrófonos:</strong> Capturan, graban y transmiten voz desde el equipo.</li>
+        <li><strong>Webcam:</strong> Captura imágenes en movimiento y las transfiere digitalmente.</li>
+        <li><strong>Dispositivos externos de almacenamiento:</strong> Permiten transportar información entre equipos vía USB.</li>
+      </ul>
+
+      <!-- 1.2.1 -->
+      <div class="subsection-title">1.2.1 Arquitecturas RISC y CISC</div>
+
+      <h4>RISC (Reduced Instruction Set Computer)</h4>
+      <p>Utiliza un conjunto reducido y altamente optimizado de instrucciones. Los procesadores RISC ejecutan instrucciones en un solo ciclo de reloj, siendo eficientes en operaciones simples y repetitivas. Son ampliamente usados en servidores y dispositivos móviles.</p>
+
+      <h4>CISC (Complex Instruction Set Computer)</h4>
+      <p>Emplea un conjunto de instrucciones más amplio y diverso que puede ejecutar tareas complejas en un ciclo de reloj, facilitando la programación aunque con posibles implicaciones en el rendimiento.</p>
+      <div class="img-container-u1">
+        <img src="img/u1/Arquitecturas RISC Y CISC.JPG" alt="Comparativa RISC vs CISC" class="img-subtema">
+      </div>
+
+      <!-- 1.2.2 -->
+      <div class="subsection-title">1.2.2 Unidad Central de Procesamiento (CPU)</div>
+      <p>La CPU es el administrador del sistema donde la entrada de datos se transforma en salida. Regula simultáneamente todas las funciones internas de la computadora.</p>
+
+      <h4>Unidad Aritmética Lógica (ALU)</h4>
+      <p>Realiza operaciones aritméticas (suma, resta) y lógicas (AND, OR, comparaciones). Contiene circuitos aritméticos, lógicos (puertas AND, OR, XOR) y de control del flujo de instrucciones.</p>
+      <div class="img-container-u1">
+        <img src="img/u1/Unidad Aritmética Lógica(ALU).JPG" alt="Esquema Interno ALU" class="img-subtema">
+      </div>
+
+      <h4>Unidad de Control (UC)</h4>
+      <p>Coordina y gestiona la ejecución de instrucciones: interpreta y decodifica las instrucciones de memoria, regula el flujo de datos entre las partes de la CPU y asegura el correcto funcionamiento del procesador.</p>
+
+      <h4>Buses</h4>
+      <p>Vías físicas que interconectan CPU, memoria y periféricos, clasificadas según función:</p>
+      <ul>
+        <li><strong>Bus del Sistema:</strong> Conecta CPU con memoria principal y componentes clave.</li>
+        <li><strong>Bus Local:</strong> Conecta dispositivos de alta velocidad directamente a la CPU.</li>
+      </ul>
+
+      <!-- 1.3 -->
+      <div class="subsection-title">1.3 Memoria Principal</div>
+
+      <h4>RAM (Random Access Memory)</h4>
+      <p>Actúa como memoria a corto plazo de la computadora, almacenando temporalmente datos y programas que la CPU necesita de forma inmediata. Es un búfer ultrarrápido entre el almacenamiento a largo plazo y el procesador.</p>
+
+      <h4>ROM (Read-Only Memory)</h4>
+      <p>Tipo de almacenamiento no volátil que retiene información permanentemente, incluso sin energía. Almacena el firmware, instrucciones de arranque (BIOS/UEFI) y el funcionamiento básico del hardware.</p>
+      <div class="img-container-u1">
+        <img src="img/u1/RAM ROM.JPG" alt="Memorias RAM y ROM" class="img-subtema">
+      </div>
+
+      <h4>Memoria Caché</h4>
+      <p>Almacenamiento temporal de alta velocidad, ubicado entre la CPU y la RAM, que guarda datos e instrucciones frecuentes para acelerar el rendimiento. El procesador accede a caché antes que a la RAM, mucho más lenta.</p>
+      <div class="img-container-u1" style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+        <img src="img/u1/Memoria Cache.JPG"  alt="Estructura Caché L1 L2 L3" class="img-subtema" style="max-width:48%;">
+        <img src="img/u1/Memria chache.JPG" alt="Ubicación Física Caché"   class="img-subtema" style="max-width:48%;">
+      </div>
+
+      <!-- 1.4 -->
+      <div class="subsection-title">1.4 Módulos de Entrada/Salida (E/S)</div>
+      <p>Son la interfaz entre la CPU y los periféricos. Gestionan diferencias de velocidad, formatos de datos y voltajes entre procesador y hardware externo.</p>
+      <ul>
+        <li><strong>E/S Programada (PIO):</strong> Transferencias de datos iniciadas por la CPU bajo control del driver para acceder a registros o memoria del dispositivo.</li>
+      </ul>
+      <div class="img-container-u1">
+        <img src="img/u1/Entrada salida programada.JPG" alt="E/S Programada" class="img-subtema">
+      </div>
+      <ul>
+        <li><strong>E/S mediante Interrupciones:</strong> La CPU emite comandos al módulo E/S y continúa con otras tareas hasta que el dispositivo la interrumpe al finalizar.</li>
+      </ul>
+      <div class="img-container-u1">
+        <img src="img/u1/Entrada salida interrupciones.JPG" alt="E/S por Interrupciones" class="img-subtema">
+      </div>
+
+      <!-- 1.5 -->
+      <div class="subsection-title">1.5 Acceso Directo a Memoria (DMA)</div>
+      <p>El controlador DMA transfiere datos directamente entre la memoria principal y el dispositivo de E/S sin usar la CPU como intermediario. La CPU solo interviene al inicio y al final de la transferencia, aliviando la congestión del bus.</p>
+      <div class="img-container-u1">
+        <img src="img/u1/Acceso directo a memoria.JPG" alt="Esquema Controlador DMA" class="img-subtema">
+      </div>
+
+      <!-- 1.6 -->
+      <div class="subsection-title">1.6 Buses</div>
+      <p>Canal electrónico por el que se transfieren datos entre componentes de la computadora. Los tipos principales son:</p>
+      <ul>
+        <li><strong>Bus de sistema:</strong> Conecta CPU con memoria y componentes críticos.</li>
+        <li><strong>Bus de datos:</strong> Bidireccional; transmite datos entre componentes y dispositivos.</li>
+        <li><strong>Bus de direcciones:</strong> Transmite la dirección de memoria a acceder.</li>
+        <li><strong>Bus de control:</strong> Controla el acceso y uso de las líneas de datos y direcciones.</li>
+        <li><strong>Buses locales:</strong> Conectan dispositivos internos a la placa madre.</li>
+        <li><strong>Buses periféricos:</strong> Permiten la conexión de dispositivos externos.</li>
+      </ul>
+      <div class="img-container-u1">
+        <img src="img/u1/Buses.JPG" alt="Bus de Direcciones, Datos y Control" class="img-subtema">
+      </div>
+      <div class="img-container-u1">
+        <img src="img/u1/Buses jerarquia.JPG" alt="Jerarquía de Buses" class="img-subtema">
+      </div>
+
+      <!-- 1.7 -->
+      <div class="subsection-title">1.7 Interrupciones</div>
+      <p>Mecanismo que altera el orden lógico de ejecución como respuesta a un evento externo generado por el hardware de E/S de forma asincrónica.</p>
+      <ul>
+        <li><strong>Técnica de Polling:</strong> La CPU verifica repetidamente el estado de un dispositivo periférico para determinar si necesita atención.</li>
+        <li><strong>Sincronización con E/S:</strong> La CPU realiza otras tareas mientras el periférico procesa. Al terminar, el dispositivo envía una señal (IRQ) que activa una rutina ISR.</li>
+      </ul>
+
+    </div>
+  </div>
+  <!-- ────────────────────────────────────────────────────── -->
+  <!--  UNIDAD 2                                              -->
+  <!-- ────────────────────────────────────────────────────── -->
+  <div class="card border-u2" id="unidad2">
+    <div class="card-header">
+      <h2><i class="fa-solid fa-cpu"></i> Unidad 2: Estructura y Funcionamiento del Procesador</h2>
+    </div>
+    <div class="card-body">
+
+      <div class="info-block">
+        <h3>2.1 Organización del Procesador</h3>
+        <p>La CPU procesa instrucciones y coordina todas las operaciones del sistema. Para optimizar el rendimiento implementa la <strong>Segmentación (Pipelining)</strong>, procesando simultáneamente diferentes etapas de varias instrucciones en cascada.</p>
+      </div>
+
+      <div class="info-block">
+        <h3>2.2 Estructura de Registros</h3>
+        <p>Los registros son celdas de almacenamiento de velocidad extrema integradas dentro del procesador, divididas en dos categorías:</p>
+        <div class="grid-2col">
+          <div class="nested-box">
+            <h4 class="color-u2"><i class="fa-solid fa-eye"></i> A. Registros Visibles para el Usuario</h4>
+            <p>Manipulados directamente por los programadores en ensamblador:</p>
+            <ul class="custom-bullets">
+              <li><strong>Registros de Datos:</strong> Acumuladores para cálculos matemáticos inmediatos.</li>
+              <li><strong>Registros de Direcciones:</strong> Almacenan punteros e índices de segmentos de memoria.</li>
+              <li><strong>Registros de Índice:</strong> Recorren arreglos mediante autoincrementos.</li>
+            </ul>
+          </div>
+          <div class="nested-box">
+            <h4 class="color-u2"><i class="fa-solid fa-eye-slash"></i> B. Registros de Control y Estado</h4>
+            <p>Uso exclusivo de la Unidad de Control:</p>
+            <ul class="custom-bullets">
+              <li><strong>Contador de Programa (PC):</strong> Dirección de la siguiente instrucción.</li>
+              <li><strong>Registro de Instrucción (IR/CIR):</strong> Almacena la instrucción actual en decodificación.</li>
+              <li><strong>Registro de Dirección de Memoria (MAR):</strong> Apunta a la dirección física de RAM.</li>
+              <li><strong>Registro Intermedio de Memoria (MBR):</strong> Retiene el dato transferido desde/hacia memoria.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <h3>2.3 El Ciclo de Instrucción (Ciclo FDE)</h3>
+        <p>Procesamiento síncrono elemental de la CPU:</p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon bg-u2">1</div>
+            <div class="timeline-content">
+              <h5>Búsqueda (Fetch)</h5>
+              <p>El PC envía la dirección a memoria; la instrucción se aloja en el CIR y el PC se incrementa para apuntar a la siguiente.</p>
             </div>
-            <div class="card-body">
-                <p class="definition-tareas">
-                    <strong>Archivos:</strong> tareas en formato PDF desarrollados a lo largo del periodo académico para la materia de Arquitectura de Computadoras.
-                </p>
-                
-                <div class="grid-2col">
-                    <div class="pdf-item-box">
-                        <div class="pdf-icon-side">
-                            <i class="fa-solid fa-file-invoice animate-pulse"></i>
-                        </div>
-                        <div class="pdf-details-side">
-                            <h4>Investigación de Procesadores</h4>
-                            <a href="docs/Tareas/Procesadores JohnatanRodriguezVIgil.pdf" download="Investigacion_Procesadores_JohnatanRodriguez.pdf" class="btn-download-pdf">
-                                <i class="fa-solid fa-cloud-arrow-down"></i> Descargar PDF
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="pdf-item-box">
-                        <div class="pdf-icon-side">
-                            <i class="fa-solid fa-layer-group animate-pulse"></i>
-                        </div>
-                        <div class="pdf-details-side">
-                            <h4>Gamas de Equipos de Cómputo</h4>
-                            <a href="docs/Tareas/Gamas de equipos de computo.pdf" download="Gamas_de_equipos_de_computo.pdf" class="btn-download-pdf">
-                                <i class="fa-solid fa-cloud-arrow-down"></i> Descargar PDF
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-2col margin-top" style="margin-top: 1.5rem;">
-                    <div class="pdf-item-box">
-                        <div class="pdf-icon-side">
-                            <i class="fa-solid fa-laptop-code animate-pulse"></i>
-                        </div>
-                        <div class="pdf-details-side">
-                            <h4>Diseño de Equipos de Cómputo</h4>
-                            <a href="docs/Tareas/Diseñó de equipos.pdf" download="Diseno_de_equipos.pdf" class="btn-download-pdf">
-                                <i class="fa-solid fa-cloud-arrow-down"></i> Descargar PDF
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="pdf-item-box">
-                        <div class="pdf-icon-side">
-                            <i class="fa-solid fa-tags animate-pulse"></i>
-                        </div>
-                        <div class="pdf-details-side">
-                            <h4>Cotización de Equipos</h4>
-                            <a href="docs/Tareas/Cotización de equipos.pdf" download="Cotizacion_de_equipos.pdf" class="btn-download-pdf">
-                                <i class="fa-solid fa-cloud-arrow-down"></i> Descargar PDF
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon bg-u2">2</div>
+            <div class="timeline-content">
+              <h5>Decodificación (Decode)</h5>
+              <p>La UC interpreta el código de operación (opcode), identifica los operandos y prepara las rutas de datos internas.</p>
             </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon bg-u2">3</div>
+            <div class="timeline-content">
+              <h5>Ejecución (Execute)</h5>
+              <p>La ALU realiza la operación y los resultados se guardan en registros internos o se escriben de vuelta a la RAM.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <h3>2.4 Modos de Direccionamiento</h3>
+        <p>Metodologías lógicas para localizar datos en memoria. Un error de direccionamiento puede provocar fallos graves de seguridad.</p>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Modo</th>
+                <th>Mecanismo</th>
+                <th>Ejemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Inmediato</strong></td>
+                <td>El dato está incluido dentro de la misma instrucción.</td>
+                <td><code>MOV AX, 0ABCDH</code></td>
+              </tr>
+              <tr>
+                <td><strong>Directo (Absoluto)</strong></td>
+                <td>La instrucción contiene la dirección de memoria exacta del dato.</td>
+                <td><code>MOV BX, [1234H]</code></td>
+              </tr>
+              <tr>
+                <td><strong>Por Registro</strong></td>
+                <td>El operando reside dentro de un registro interno del procesador.</td>
+                <td><code>MOV AX, CX</code></td>
+              </tr>
+              <tr>
+                <td><strong>Indirecto</strong></td>
+                <td>Apunta a un registro que contiene la dirección RAM real (base de punteros).</td>
+                <td><code>MOV AX, [BX]</code></td>
+              </tr>
+              <tr>
+                <td><strong>Indexado</strong></td>
+                <td>Combina base, índice y desplazamiento constante.</td>
+                <td><code>MOV AX, [BX+SI+8]</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <h3>2.5 Casos de Estudio Reales</h3>
+        <div class="grid-2col">
+          <div class="case-card border-u2">
+            <h5><i class="fa-solid fa-shield-virus"></i> Caso 1: Gusano Code Red (2001)</h5>
+            <p>Una aplicación en C usó <code>strcpy</code> sin validar límites. Un atacante inyectó una cadena que sobrescribió la pila y modificó el PC, infectando más de 350,000 servidores en 14 horas.</p>
+          </div>
+          <div class="case-card border-u2">
+            <h5><i class="fa-solid fa-car-on"></i> Caso 2: Memoria Mapeada en ARM Cortex-M</h5>
+            <p>Los periféricos embebidos (GPIO, UART) de vehículos se controlan mapeándolos en memoria mediante direccionamiento indexado, permitiendo control de hardware crítico sin demoras.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- ────────────────────────────────────────────────────── -->
+  <!--  UNIDAD 3                                              -->
+  <!-- ────────────────────────────────────────────────────── -->
+  <div class="card border-u3" id="unidad3">
+    <div class="card-header">
+      <h2><i class="fa-solid fa-screwdriver-wrench animate-pulse"></i> Unidad 3: Selección de Componentes para Ensamble</h2>
+    </div>
+    <div class="card-body">
+
+      <div class="subsection-title">3.1 Chipset</div>
+      <div class="definition">
+        <strong>¿Qué es el Chipset?</strong> Conjunto de circuitos integrados en la placa base cuya función es coordinar y controlar la comunicación entre todos los componentes del sistema. Actúa como centro de control entre CPU, RAM, GPU y periféricos.
+      </div>
+
+      <h4>Funciones Principales</h4>
+      <ul>
+        <li><strong>Gestión de comunicación:</strong> Controla el flujo de datos entre CPU, RAM, GPU y dispositivos E/S.</li>
+        <li><strong>Control de buses:</strong> Administra canales de comunicación, velocidades y prioridades.</li>
+        <li><strong>Compatibilidad de hardware:</strong> Define qué procesadores, memorias y dispositivos son soportados.</li>
+        <li><strong>Gestión de periféricos:</strong> Controla USB, HDD/SSD, tarjetas de red y audio.</li>
+        <li><strong>Optimización de rendimiento:</strong> Regula velocidades de transferencia y evita conflictos.</li>
+      </ul>
+
+      <h4>Estructura Clásica del Chipset</h4>
+      <ul>
+        <li><strong>Northbridge (Puente Norte):</strong> Comunicación de alta velocidad con CPU, RAM y bus gráfico (AGP/PCIe).</li>
+        <li><strong>Southbridge (Puente Sur):</strong> Comunicación de baja velocidad: USB, SATA/IDE, audio, BIOS.</li>
+      </ul>
+
+      <h4>Evolución: PCH (Platform Controller Hub)</h4>
+      <p>Con el avance tecnológico, las funciones del Northbridge se integraron en la CPU. El chipset se simplificó al PCH, encargado de periféricos, almacenamiento NVMe secundario, conectividad inalámbrica y carriles de expansión adicionales.</p>
+
+      <div class="important-box">
+        <h5><i class="fa-solid fa-triangle-exclamation"></i> Importancia del Chipset</h5>
+        <p style="margin:0.5rem 0 0;">El chipset define las capacidades estructurales de la computadora: determina el procesador compatible, la cantidad y frecuencia máxima de RAM, las velocidades de transferencia y las tecnologías de expansión disponibles.</p>
+      </div>
+
+      <div class="subsection-title">3.1.1 Unidad Central de Procesamiento (CPU)</div>
+      <p>La CPU interpreta y ejecuta instrucciones de los programas. Opera bajo el <strong>Ciclo Fetch – Decode – Execute</strong>, repetido miles de millones de veces por segundo.</p>
+
+      <div class="image-container" style="text-align:center; margin:1.5rem 0;">
+        <img src="img/u3/Ciclo de Instrucciones(Funcionamiento basico).JPG"
+             alt="Ciclo de Instrucción"
+             style="max-width:100%; height:auto; border-radius:10px; border:1px solid var(--border);">
+        <span class="image-caption"><em>Figura 3.1: Ciclo Fetch – Decode – Execute – Store de la CPU.</em></span>
+      </div>
+
+      <ol>
+        <li><strong>Fetch:</strong> Obtiene la instrucción binaria desde la RAM.</li>
+        <li><strong>Decode:</strong> La UC interpreta los códigos de operación.</li>
+        <li><strong>Execute:</strong> Las unidades lógicas realizan la acción.</li>
+        <li><strong>Store:</strong> Guarda el resultado en registros o memoria.</li>
+      </ol>
+
+      <h4>Componentes Internos de la CPU</h4>
+      <ul>
+        <li><strong>Unidad de Control (CU):</strong> Dirige y orquesta todos los componentes.</li>
+        <li><strong>ALU:</strong> Realiza operaciones matemáticas y lógicas.</li>
+        <li><strong>Registros:</strong> Memorias internas ultrarrápidas de mínima capacidad.</li>
+        <li><strong>Caché:</strong> SRAM de alta velocidad que anticipa datos frecuentes.</li>
+      </ul>
+
+      <div class="subsection-title">3.1.2 Control del Bus</div>
+      <p>El bus es la autopista física de comunicación entre CPU, memoria y periféricos. El <strong>arbitraje del bus</strong> organiza el uso para evitar colisiones:</p>
+      <ul>
+        <li><strong>Bus de datos:</strong> Bidireccional, transporta la información.</li>
+        <li><strong>Bus de direcciones:</strong> Unidireccional, especifica la ubicación destino.</li>
+        <li><strong>Bus de control:</strong> Señales de sincronía (Lectura, Escritura, Interrupciones).</li>
+      </ul>
+      <p>El arbitraje puede ser <em>Centralizado</em> (chipset decide) o <em>Distribuido</em> (los periféricos se turnan por lógica interna).</p>
+
+      <div class="subsection-title">3.1.3 Puertos de Entrada/Salida</div>
+      <div class="image-container" style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin:1.5rem 0;">
+        <div style="flex:1; min-width:280px; max-width:45%;">
+          <img src="img/u3/Puertos entrada salida.JPG" alt="Puertos E/S"
+               style="width:100%; border-radius:8px; border:1px solid var(--border);">
+        </div>
+        <div style="flex:1; min-width:280px; max-width:45%;">
+          <img src="img/u3/Puertos salida.JPG" alt="Puertos de Salida"
+               style="width:100%; border-radius:8px; border:1px solid var(--border);">
+        </div>
+        <span class="image-caption" style="width:100%"><em>Figura 3.2: Interfaces de E/S en el panel trasero.</em></span>
+      </div>
+      <ul>
+        <li><strong>Puertos Comunes:</strong> USB, HDMI/DisplayPort, Ethernet RJ-45, Jacks 3.5mm.</li>
+        <li><strong>Control de E/S:</strong> Combinación de Drivers y hardware integrado en el chipset.</li>
+      </ul>
+
+      <div class="image-container" style="text-align:center; margin:1.5rem 0;">
+        <img src="img/u3/Ehthernet rj45.JPG" alt="Puerto Ethernet RJ-45"
+             style="max-width:60%; border-radius:8px; border:1px solid var(--border);">
+        <span class="image-caption"><em>Figura 3.3: Interfaz de red integrada Ethernet RJ-45.</em></span>
+      </div>
+
+      <div class="subsection-title">3.1.4 Controlador de Interrupciones</div>
+      <div class="image-container" style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin:1.5rem 0;">
+        <div style="flex:1; min-width:280px; max-width:45%;">
+          <img src="img/u3/Controlador programable.JPG" alt="Controlador PIC"
+               style="width:100%; border-radius:8px; border:1px solid var(--border);">
+        </div>
+        <div style="flex:1; min-width:280px; max-width:45%;">
+          <img src="img/u3/Controlador avanzado (APIC).JPG" alt="Controlador APIC"
+               style="width:100%; border-radius:8px; border:1px solid var(--border);">
+        </div>
+        <span class="image-caption" style="width:100%"><em>Figura 3.4: Evolución del manejo de interrupciones: PIC → APIC.</em></span>
+      </div>
+      <ul>
+        <li><strong>PIC (Programmable Interrupt Controller):</strong> Modelo clásico Intel 8259, gestiona IRQs en arquitecturas heredadas.</li>
+        <li><strong>APIC (Advanced PIC):</strong> Distribuye dinámicamente interrupciones en entornos multiprocesador.</li>
+      </ul>
+
+      <div class="subsection-title">3.1.5 Controlador DMA</div>
+      <p>Permite a periféricos de alta velocidad (SSD, NIC) transferir datos directamente hacia/desde RAM sin intervención continua de la CPU. Al finalizar, el DMA envía una interrupción al procesador.</p>
+      <div class="image-container" style="text-align:center; margin:1.5rem 0;">
+        <img src="img/u3/Controlador acceso directo a memoria.JPG" alt="Controlador DMA"
+             style="max-width:100%; border-radius:8px; border:1px solid var(--border);">
+        <span class="image-caption"><em>Figura 3.5: Interconexión y bypass del CPU mediante el controlador DMA.</em></span>
+      </div>
+      <p>Modos: <strong>Burst Mode</strong> (ráfaga continua), <strong>Cycle Stealing</strong> (robo de ciclos) y <strong>Transparent Mode</strong> (aprovecha vacíos del procesador).</p>
+
+      <div class="subsection-title">3.1.6 Circuitos de Temporizador</div>
+      <p>Basados en osciladores que cuentan pulsos del reloj para medir tiempo con alta precisión, generar interrupciones periódicas para cambio de tareas del SO y controlar eventos en intervalos exactos (sucesores del Intel 8253/8254).</p>
+      <div class="image-container" style="text-align:center; margin:1.5rem 0;">
+        <img src="img/u3/Temporizador.JPG" alt="Circuito Temporizador"
+             style="max-width:100%; border-radius:8px; border:1px solid var(--border);">
+        <span class="image-caption"><em>Figura 3.6: Bloque funcional de un temporizador de intervalos programable.</em></span>
+      </div>
+
+      <div class="subsection-title">3.1.7 Circuitos de Control</div>
+      <p>Estructuras lógicas del chipset que decodifican comandos, generan señales eléctricas operativas (lectura/escritura en memoria) y mantienen la sincronización entre subsistemas integrados.</p>
+
+      <div class="subsection-title">3.1.8 Controladores de Video</div>
+      <ul>
+        <li><strong>iGPU (Integrados):</strong> Comparten RAM del sistema; económicos y de bajo consumo.</li>
+        <li><strong>dGPU (Dedicados):</strong> Tarjetas independientes con procesador gráfico y VRAM propia. Esenciales para alto rendimiento, diseño 3D y videojuegos.</li>
+      </ul>
+
+      <div class="subsection-title">3.2.1 Entrada / Salida</div>
+      <p>El flujo operativo del hardware se divide según el entorno: <strong>Ofimática</strong> (dispositivos estándar), <strong>Multimedia</strong> (alta transferencia) o <strong>Videojuegos</strong> (baja latencia y máxima tasa de refresco).</p>
+      <div class="image-container" style="text-align:center; margin:1.5rem 0;">
+        <img src="img/u3/Que es Entrada Salida.JPG" alt="Concepto E/S"
+             style="max-width:100%; border-radius:8px; border:1px solid var(--border);">
+        <span class="image-caption"><em>Figura 3.7: Flujo de datos desde periféricos de entrada al núcleo de procesamiento.</em></span>
+      </div>
+
+      <div class="subsection-title">3.2.2 Almacenamiento</div>
+      <ul>
+        <li><strong>Interno:</strong> HDD (alta capacidad, bajo costo) y SSD NVMe/SATA (máxima velocidad).</li>
+        <li><strong>Externo y Nube:</strong> Dispositivos USB portátiles y arquitecturas Cloud para persistencia y redundancia.</li>
+      </ul>
+
+      <div class="subsection-title">3.2.3 Fuentes de Alimentación</div>
+      <p>Transforman CA de la red en CD regulada (+12V, +5V, +3.3V) para los componentes internos.</p>
+      <div class="image-container" style="text-align:center; margin:1.5rem 0;">
+        <img src="img/u3/Fuentes de alimentacion.JPG" alt="Fuentes de Alimentación"
+             style="max-width:100%; border-radius:8px; border:1px solid var(--border);">
+        <span class="image-caption"><em>Figura 3.8: Distribución de cableado ATX y conversión de potencia.</em></span>
+      </div>
+      <ul>
+        <li><strong>ATX Estándar / No modular:</strong> Cables fijos de fábrica.</li>
+        <li><strong>Modulares y Semimodulares:</strong> Solo se conectan los cables necesarios, optimizando el flujo de aire.</li>
+      </ul>
+
+      <div class="subsection-title">3.3.1 Ambientes de Servicio</div>
+      <p>Define los ecosistemas operativos donde funciona la computadora. La selección de arquitectura debe responder a las exigencias térmicas, de seguridad y durabilidad del entorno.</p>
+
+      <div class="subsection-title">3.3.2 Industria</div>
+      <p>Hardware orientado a tolerancia de fallos y resistencia extrema para líneas de manufactura 24/7. Prioriza refrigeración pasiva y procesadores con memorias ECC para corrección de errores.</p>
+
+      <div class="subsection-title">3.3.3 Comercio Electrónico</div>
+      <p>Infraestructura de alta disponibilidad, velocidad transaccional y protección criptográfica. Requiere módulos TPM 2.0 y virtualización activa para mitigar vulnerabilidades en transacciones financieras.</p>
+
+    </div>
+  </div>
+  <!-- ────────────────────────────────────────────────────── -->
+  <!--  UNIDAD 4                                              -->
+  <!-- ────────────────────────────────────────────────────── -->
+  <div class="card border-u4" id="unidad4">
+    <div class="card-header">
+      <h2><i class="fa-solid fa-network-wired animate-pulse"></i> Unidad 4: Procesamiento Paralelo</h2>
+    </div>
+    <div class="card-body">
+
+      <div class="subsection-title">4.1 Aspectos Básicos de la Computación Paralela</div>
+
+      <div class="definition">
+        <strong>¿Qué es la Computación Paralela?</strong> Forma de cómputo en la que muchas instrucciones se ejecutan simultáneamente. Los problemas grandes se dividen en partes más pequeñas que se resuelven al mismo tiempo (en paralelo).
+      </div>
+
+      <h4>Conceptos Fundamentales</h4>
+      <ul>
+        <li><strong>Paralelismo:</strong> Ejecución simultánea de múltiples tareas, hilos o procesos.</li>
+        <li><strong>División del problema:</strong> Descomposición metódica en partes manejables.</li>
+        <li><strong>Comunicación:</strong> Intercambio de datos entre procesadores o núcleos.</li>
+        <li><strong>Sincronización:</strong> Coordinación estricta para evitar condiciones de carrera.</li>
+        <li><strong>Balance de carga:</strong> Distribución equitativa del trabajo entre núcleos.</li>
+        <li><strong>Escalabilidad:</strong> Capacidad de manejar más carga al añadir recursos.</li>
+        <li><strong>Speedup:</strong> Medida de cuánto más rápido corre un programa en paralelo vs. secuencial.</li>
+      </ul>
+
+      <div class="subsection-title">4.1.1 Tipos de Computación Paralela</div>
+      <ul>
+        <li><strong>Paralelismo a nivel de bit:</strong> Aumentar el tamaño de la palabra del procesador (8→16→32→64 bits).</li>
+        <li><strong>Paralelismo a nivel de instrucción (ILP):</strong> El hardware reordena instrucciones independientes para ejecutarlas simultáneamente (pipeline, superescalar).</li>
+        <li><strong>Paralelismo de datos:</strong> La misma operación se aplica en paralelo sobre conjuntos de datos distintos en múltiples núcleos.</li>
+        <li><strong>Paralelismo de tareas:</strong> Hilos de ejecución completamente diferentes se ejecutan simultáneamente.</li>
+      </ul>
+
+      <div class="subsection-title">4.1.2 Arquitectura Secuencial (Von Neumann)</div>
+      <div class="image-container" style="text-align:center; margin:1.5rem 0;">
+        <img src="img/u4/Arquitectura_Von_Neumann.jpg" alt="Von Neumann"
+             style="max-width:60%; border-radius:8px; border:1px solid var(--border);">
+        <span class="image-caption"><em>Figura 4.1: Modelo de Von Neumann con bus unificado.</em></span>
+      </div>
+      <ul>
+        <li>Una CPU ejecuta una sola instrucción a la vez de forma consecutiva.</li>
+        <li>Presenta el <strong>cuello de botella de Von Neumann</strong>: el bus compartido limita el rendimiento.</li>
+      </ul>
+
+      <div class="subsection-title">4.1.3 Taxonomía de Flynn</div>
+      <div class="image-container" style="text-align:center; margin:1.5rem 0;">
+        <img src="img/u4/Toxonomia Flynn.jpg" alt="Taxonomía de Flynn"
+             style="max-width:70%; border-radius:8px; border:1px solid var(--border);">
+        <span class="image-caption"><em>Figura 4.2: Matriz SISD / SIMD / MISD / MIMD.</em></span>
+      </div>
+      <div class="important-box">
+        <h5><i class="fa-solid fa-layer-group"></i> Las Cuatro Categorías:</h5>
+        <ul>
+          <li><strong>SISD:</strong> Un flujo de instrucciones + un flujo de datos → computación secuencial clásica.</li>
+          <li><strong>SIMD:</strong> Una instrucción aplicada a múltiples flujos de datos → base de GPUs y procesadores vectoriales.</li>
+          <li><strong>MISD:</strong> Múltiples instrucciones sobre un único flujo de datos → sistemas de tolerancia a fallos aeroespaciales.</li>
+          <li><strong>MIMD:</strong> Múltiples instrucciones y datos simultáneos → multiprocesadores, clústeres, supercomputadoras.</li>
+        </ul>
+      </div>
+
+      <div class="subsection-title">4.2 Organización de Memoria</div>
+
+      <h4>Memoria Compartida (Shared Memory)</h4>
+      <p>Todos los núcleos acceden a un espacio de memoria global unificado.</p>
+      <div class="image-container" style="text-align:center; margin:1.5rem 0;">
+        <img src="img/u4/shared memory.jpg" alt="Memoria Compartida"
+             style="max-width:65%; border-radius:8px; border:1px solid var(--border);">
+        <span class="image-caption"><em>Figura 4.3: Arquitectura de Memoria Compartida.</em></span>
+      </div>
+      <ul>
+        <li><strong>UMA:</strong> Tiempos de acceso idénticos para todos los procesadores.</li>
+        <li><strong>NUMA:</strong> Tiempos variables según la ubicación física del bloque de memoria.</li>
+      </ul>
+      <div class="image-container" style="text-align:center; margin:1.5rem 0;">
+        <img src="img/u4/UMA NUMA.jpg" alt="UMA vs NUMA"
+             style="max-width:75%; border-radius:8px; border:1px solid var(--border);">
+        <span class="image-caption"><em>Figura 4.4: Acceso Uniforme (UMA) vs No Uniforme (NUMA).</em></span>
+      </div>
+
+      <h4>Memoria Distribuida (Distributed Memory)</h4>
+      <p>Cada procesador posee su propia memoria privada e independiente. La comunicación entre nodos se realiza mediante <strong>Paso de Mensajes (Message Passing)</strong>.</p>
+      <div class="image-container" style="text-align:center; margin:1.5rem 0;">
+        <img src="img/u4/memoria distribuida.jpg" alt="Memoria Distribuida"
+             style="max-width:70%; border-radius:8px; border:1px solid var(--border);">
+        <span class="image-caption"><em>Figura 4.5: Arquitectura de memoria distribuida con nodos independientes.</em></span>
+      </div>
+
+      <div class="subsection-title">4.3 Arquitecturas Paralelas</div>
+      <div style="display:flex; flex-wrap:wrap; gap:1.2rem; justify-content:center; margin:1.5rem 0;">
+        <div style="flex:1; min-width:220px; max-width:31%; text-align:center;">
+          <img src="img/u4/multiprocesador1.jpg" alt="Multiprocesador"
+               style="width:100%; border-radius:8px; border:1px solid var(--border);">
+          <span class="image-caption"><em>Sistemas Multiprocesador</em></span>
+        </div>
+        <div style="flex:1; min-width:220px; max-width:31%; text-align:center;">
+          <img src="img/u4/multi-core_cpu.jpg" alt="Multi-núcleo"
+               style="width:100%; border-radius:8px; border:1px solid var(--border);">
+          <span class="image-caption"><em>Multi-núcleo (Multi-core)</em></span>
+        </div>
+        <div style="flex:1; min-width:220px; max-width:31%; text-align:center;">
+          <img src="img/u4/Cluster.jpg" alt="Clúster"
+               style="width:100%; border-radius:8px; border:1px solid var(--border);">
+          <span class="image-caption"><em>Sistemas Distribuidos (Clústeres)</em></span>
+        </div>
+      </div>
+      <ul>
+        <li><strong>Sistemas Multiprocesador:</strong> Varias CPUs en una placa compartiendo memoria principal.</li>
+        <li><strong>Multi-núcleo:</strong> Un chip con dos o más núcleos independientes en su interior.</li>
+        <li><strong>Clústeres:</strong> Computadoras independientes interconectadas que actúan como un recurso unificado.</li>
+      </ul>
+
+      <div class="subsection-title">4.4 Redes de Interconexión</div>
+
+      <h4>Redes Estáticas (Topologías Fijas)</h4>
+      <div class="image-container" style="text-align:center; margin:1.5rem 0;">
+        <img src="img/u4/network-topology.jpg" alt="Topologías Estáticas"
+             style="max-width:85%; border-radius:8px; border:1px solid var(--border);">
+        <span class="image-caption"><em>Figura 4.6: Topologías fijas comerciales.</em></span>
+      </div>
+      <ul>
+        <li><strong>Anillo:</strong> Nodos en forma circular; la información viaja de nodo en nodo.</li>
+        <li><strong>Malla:</strong> Cuadrícula donde cada nodo se conecta con sus vecinos.</li>
+        <li><strong>Estrella:</strong> Todos los nodos enlazan a un nodo central maestro.</li>
+        <li><strong>Hipercubo:</strong> Estructura multidimensional con conexiones logarítmicas por nodo.</li>
+      </ul>
+
+      <h4>Redes Dinámicas</h4>
+      <div style="display:flex; flex-wrap:wrap; gap:1.2rem; justify-content:center; margin:1.5rem 0;">
+        <div style="flex:1; min-width:200px; max-width:31%; text-align:center;">
+          <img src="img/u4/topologia bus.jpg" alt="Bus Dinámico"
+               style="width:100%; border-radius:8px; border:1px solid var(--border);">
+          <span class="image-caption"><em>Bus Compartido Dinámico</em></span>
+        </div>
+        <div style="flex:1; min-width:200px; max-width:31%; text-align:center;">
+          <img src="img/u4/crossbar Switch.jpg" alt="Crossbar Switch"
+               style="width:100%; border-radius:8px; border:1px solid var(--border);">
+          <span class="image-caption"><em>Matriz Crossbar Switch</em></span>
+        </div>
+        <div style="flex:1; min-width:200px; max-width:31%; text-align:center;">
+          <img src="img/u4/multistage interconnection networks.jpg" alt="Redes Multietapa MIN"
+               style="width:100%; border-radius:8px; border:1px solid var(--border);">
+          <span class="image-caption"><em>Redes Multietapa (MIN)</em></span>
+        </div>
+      </div>
+      <ul>
+        <li><strong>Bus Compartido:</strong> Línea única utilizada alternadamente; propensa a cuellos de botella.</li>
+        <li><strong>Crossbar Switch:</strong> Conexiones punto a punto simultáneas entre CPU y memoria; máximo rendimiento.</li>
+        <li><strong>Redes Multietapa (MIN):</strong> Etapas consecutivas de pequeños conmutadores; equilibrio costo-flexibilidad.</li>
+      </ul>
+
+      <div class="subsection-title">4.5 Casos de Estudio</div>
+
+      <div class="important-box" style="display:flex; flex-wrap:wrap; gap:1rem; align-items:center; margin-bottom:1rem;">
+        <div style="flex:2; min-width:240px;">
+          <h5><i class="fa-solid fa-microchip"></i> 1. Intel Core / Xeon</h5>
+          <p style="margin:0.4rem 0 0;">Intel implementa <strong>Ring Bus</strong> en procesadores de escritorio y <strong>Mesh Architecture</strong> en servidores Xeon para escalado eficiente de núcleos.</p>
+        </div>
+        <div style="flex:1; min-width:140px; text-align:center;">
+          <img src="img/u4/xeon.jpg" alt="Intel Xeon"
+               style="width:100%; border-radius:8px; border:1px solid var(--border);">
+        </div>
+      </div>
+
+      <div class="important-box" style="display:flex; flex-wrap:wrap; gap:1rem; align-items:center; margin-bottom:1rem;">
+        <div style="flex:2; min-width:240px;">
+          <h5><i class="fa-solid fa-cubes"></i> 2. AMD Ryzen / EPYC</h5>
+          <p style="margin:0.4rem 0 0;">AMD diseña bloques independientes de silicio llamados <strong>Chiplets</strong>, comunicados mediante la red propietaria <strong>Infinity Fabric</strong> de ultra alta velocidad.</p>
+        </div>
+        <div style="flex:1; min-width:140px; text-align:center;">
+          <img src="img/u4/ryzen.jpg" alt="AMD EPYC Chiplet"
+               style="width:100%; border-radius:8px; border:1px solid var(--border);">
+        </div>
+      </div>
+
+      <div class="important-box" style="display:flex; flex-wrap:wrap; gap:1rem; align-items:center;">
+        <div style="flex:2; min-width:240px;">
+          <h5><i class="fa-solid fa-microchip"></i> 3. NVIDIA GPUs</h5>
+          <p style="margin:0.4rem 0 0;">Las GPUs NVIDIA incorporan <strong>miles de núcleos pequeños</strong> para paralelismo masivo de datos: renderizado gráfico avanzado, cálculos matriciales e Inteligencia Artificial.</p>
+        </div>
+        <div style="flex:1; min-width:140px; text-align:center;">
+          <img src="img/u4/gpu-computing.jpg" alt="GPU Computing"
+               style="width:100%; border-radius:8px; border:1px solid var(--border);">
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- ────────────────────────────────────────────────────── -->
+  <!--  PRÁCTICAS                                             -->
+  <!-- ────────────────────────────────────────────────────── -->
+  <div class="card border-p" id="practicas">
+    <div class="card-header">
+      <h2><i class="fa-solid fa-flask-vial animate-pulse"></i> Prácticas de Laboratorio</h2>
+      <span class="unit-tag">Interactivo</span>
+    </div>
+    <div class="card-body">
+
+      <div class="definition">
+        <strong>Reportes:</strong> Procedimientos de ensamble, mantenimiento preventivo y diagnóstico de hardware real realizados en el laboratorio. Haz clic en cada práctica para ver el reporte completo.
+      </div>
+
+      <div class="practicas-grid">
+
+        <div class="practica-item">
+          <div class="click-area" onclick="abrirModal(1)">
+            <div class="status-indicator"><i class="fa-solid fa-book-bookmark"></i> Ver Reporte</div>
+            <h3>Práctica 1: Desensamble y Armado de Hardware</h3>
+            <p class="p-desc">Identificación física de componentes internos de un equipo de escritorio antiguo.</p>
+          </div>
+          <a href="docs/Practicas/Practica1.pdf" download="Reporte_Practica1_JohnatanRodriguez.pdf" class="btn-download-practica">
+            <i class="fa-solid fa-file-arrow-down animate-pulse"></i> Descargar Reporte PDF
+          </a>
         </div>
 
-    <footer>
-        <p><i class="fa-solid fa-graduation-cap"></i> | xJoNax | 2026</p>
-    </footer>
+        <div class="practica-item">
+          <div class="click-area" onclick="abrirModal(2)">
+            <div class="status-indicator"><i class="fa-solid fa-book-bookmark"></i> Ver Reporte</div>
+            <h3>Práctica 2: Arquitecturas de Procesadores</h3>
+            <p class="p-desc">Estudio técnico comparativo de microarquitecturas, litografías, frecuencias y sockets de 5 procesadores Intel.</p>
+          </div>
+          <a href="docs/Practicas/Practica2.pdf" download="Reporte_Practica2_JohnatanRodriguez.pdf" class="btn-download-practica">
+            <i class="fa-solid fa-file-arrow-down animate-pulse"></i> Descargar Reporte PDF
+          </a>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="practica-item">
+          <div class="click-area" onclick="abrirModal(3)">
+            <div class="status-indicator"><i class="fa-solid fa-book-bookmark"></i> Ver Reporte</div>
+            <h3>Práctica 3: Identificación e Instalación de RAM</h3>
+            <p class="p-desc">Inspección de módulos físicos de 16 GB DDR4 (Samsung y SK Hynix) y validación lógica en sistema.</p>
+          </div>
+          <a href="docs/Practicas/Practica3.pdf" download="Reporte_Practica3_JohnatanRodriguez.pdf" class="btn-download-practica">
+            <i class="fa-solid fa-file-arrow-down animate-pulse"></i> Descargar Reporte PDF
+          </a>
+        </div>
+
+        <div class="practica-item">
+          <div class="click-area" onclick="abrirModal(4)">
+            <div class="status-indicator"><i class="fa-solid fa-book-bookmark"></i> Ver Reporte</div>
+            <h3>Práctica 4: Extracción de Componentes, Flujo y POST</h3>
+            <p class="p-desc">Desmontaje y reensamble de equipo OEM HP con verificación del ciclo de encendido POST.</p>
+          </div>
+          <a href="docs/Practicas/Practica4.pdf" download="Reporte_Practica4_JohnatanRodriguez.pdf" class="btn-download-practica">
+            <i class="fa-solid fa-file-arrow-down animate-pulse"></i> Descargar Reporte PDF
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- ────────────────────────────────────────────────────── -->
+  <!--  TAREAS                                                -->
+  <!-- ────────────────────────────────────────────────────── -->
+  <div class="card border-tareas" id="tareas">
+    <div class="card-header">
+      <h2><i class="fa-solid fa-file-pdf"></i> Tareas</h2>
+      <span class="unit-tag">Documentación</span>
+    </div>
+    <div class="card-body">
+
+      <div class="definition-tareas">
+        <strong>Archivos:</strong> Tareas en formato PDF desarrolladas a lo largo del periodo académico para la materia de Arquitectura de Computadoras.
+      </div>
+
+      <div class="grid-2col">
+        <div class="pdf-item-box">
+          <div class="pdf-icon-side"><i class="fa-solid fa-file-invoice animate-pulse"></i></div>
+          <div class="pdf-details-side">
+            <h4>Investigación de Procesadores</h4>
+            <a href="docs/Tareas/Procesadores JohnatanRodriguezVIgil.pdf"
+               download="Investigacion_Procesadores_JohnatanRodriguez.pdf"
+               class="btn-download-pdf">
+              <i class="fa-solid fa-cloud-arrow-down"></i> Descargar PDF
+            </a>
+          </div>
+        </div>
+
+        <div class="pdf-item-box">
+          <div class="pdf-icon-side"><i class="fa-solid fa-layer-group animate-pulse"></i></div>
+          <div class="pdf-details-side">
+            <h4>Gamas de Equipos de Cómputo</h4>
+            <a href="docs/Tareas/Gamas de equipos de computo.pdf"
+               download="Gamas_de_equipos_de_computo.pdf"
+               class="btn-download-pdf">
+              <i class="fa-solid fa-cloud-arrow-down"></i> Descargar PDF
+            </a>
+          </div>
+        </div>
+
+        <div class="pdf-item-box">
+          <div class="pdf-icon-side"><i class="fa-solid fa-laptop-code animate-pulse"></i></div>
+          <div class="pdf-details-side">
+            <h4>Diseño de Equipos de Cómputo</h4>
+            <a href="docs/Tareas/Diseñó de equipos.pdf"
+               download="Diseno_de_equipos.pdf"
+               class="btn-download-pdf">
+              <i class="fa-solid fa-cloud-arrow-down"></i> Descargar PDF
+            </a>
+          </div>
+        </div>
+
+        <div class="pdf-item-box">
+          <div class="pdf-icon-side"><i class="fa-solid fa-tags animate-pulse"></i></div>
+          <div class="pdf-details-side">
+            <h4>Cotización de Equipos</h4>
+            <a href="docs/Tareas/Cotización de equipos.pdf"
+               download="Cotizacion_de_equipos.pdf"
+               class="btn-download-pdf">
+              <i class="fa-solid fa-cloud-arrow-down"></i> Descargar PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  MODAL PRÁCTICAS                                          -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<div id="modalPractica" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="cerrarModal()">&times;</span>
+    <div id="modal-body-content"></div>
+  </div>
+</div>
+
+<footer>
+  <p><i class="fa-solid fa-graduation-cap"></i> &nbsp; Johnatan Rodríguez Vigil &nbsp;·&nbsp; xJoNax &nbsp;·&nbsp; 2026</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
